@@ -1,132 +1,155 @@
-/* Custom properties for the new Black and Yellow Professional Doodle Theme */
+/*
+  Doodle Background Setup:
+  You must upload a tileable doodle image (e.g., a simple line art pattern)
+  to your repository. Name it 'doodle-bg.png' and place it in an 'images' folder,
+  or replace the URL below with your preferred image link.
+*/
 :root {
-    /* PROFESSIONAL BLACK & YELLOW COLORS */
-    --primary-color: #FFD700; /* Bright Gold/Yellow for highlights */
-    --secondary-color: #000000; /* Black for text and main lines */
-    --background-color: #FAFAFA; /* Soft White/Cream for clean background */
-    --text-color: #000000; /* Black text for maximum readability */
-    --card-bg-color: #FFFFFF; /* White card background */
-    --sketch-border: 2px solid var(--secondary-color); /* Thinner black border */
-    --shadow-color: rgba(0, 0, 0, 0.6); /* Slightly darker shadow */
+    --primary-color: #ff6b6b; /* Playful Red */
+    --secondary-color: #48dbfb; /* Playful Blue */
+    --background-color: #f7f1e3; /* Paper-like Off-White */
+    --text-color: #2c3e50;
+    --sketch-border: 4px solid var(--text-color);
 }
 
-/* Base Body Styles */
 body {
-    font-family: 'Roboto', sans-serif; /* Professional, readable font for body */
-    line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: var(--background-color);
-    background-image: url('https://www.transparenttextures.com/patterns/notebook-dark.png'); /* Doodle texture */
+    font-family: 'Architects Daughter', cursive; /* Playful, handwritten font */
     color: var(--text-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-color: var(--background-color);
+    /* Placeholder: Replace with your doodle image URL or 'url(images/doodle-bg.png)' */
+    background-image: url('https://www.transparenttextures.com/patterns/notebook.png'); 
+    background-attachment: fixed;
 }
 
-/* Headings - Using the artistic, readable handwriting font */
-h1, h2, h3 {
-    font-family: 'Kalam', cursive;
-    color: var(--secondary-color);
-    text-shadow: 2px 2px 0 var(--primary-color); /* Yellow text shadow */
-}
-
-/* Main Layout */
-.container {
-    width: 90%;
-    max-width: 1000px;
-    padding: 20px;
-}
-
-/* Navigation - Clean, professional, but keeping a slight doodle shape */
+/* --- Navigation & Tabs Styling --- */
 nav {
-    background-color: var(--primary-color); /* Yellow Navigation Bar */
-    padding: 10px 0;
-    width: 100%;
-    box-shadow: 0 4px 6px -6px #222;
-    margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+    border-bottom: var(--sketch-border);
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-}
-
-nav li {
-    display: inline;
-    margin: 0 15px;
+.nav-doodle {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
 }
 
 nav a {
+    font-family: 'Permanent Marker', cursive; /* A bolder, marker-style font for tabs */
+    color: var(--text-color);
     text-decoration: none;
-    color: var(--secondary-color);
-    font-weight: 700;
     padding: 8px 15px;
-    /* Subtle custom shape for playful touch */
-    border-radius: 15px 3px 15px 3px; 
-    border: var(--sketch-border); 
-    transition: all 0.2s ease;
-}
-
-/* Professional Hover Effect (Yellow background, subtle lift) */
-nav a:hover {
-    background-color: var(--secondary-color); 
-    color: var(--primary-color);
-    transform: translate(-2px, -2px);
-    box-shadow: 2px 2px 0 var(--shadow-color);
-}
-
-/* Card Styles - White background, black border, clean shadow */
-.card {
-    background-color: var(--card-bg-color);
-    padding: 20px;
-    margin-bottom: 25px;
-    border: var(--sketch-border); 
-    box-shadow: 4px 4px 0 var(--shadow-color); /* Stronger, classy shadow */
-    /* Subtle rotation removed for a more professional look */
-    transform: rotate(0deg); 
+    border: 2px solid var(--text-color);
+    border-radius: 20px 5px 20px 5px; /* Sketchy/wavy border effect */
     transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    box-shadow: 2px 2px 0 var(--text-color); /* Lifted/sketched button shadow */
+}
+
+nav a:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translate(-1px, -1px); /* Little playful 'jump' animation */
+    box-shadow: 4px 4px 0 var(--text-color);
+}
+
+/* --- Section & Card Styling --- */
+.container {
+    min-height: 100vh;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.card {
+    background-color: white;
+    padding: 40px;
+    margin: 20px;
+    max-width: 700px;
+    border: var(--sketch-border);
+    box-shadow: 8px 8px 0 var(--secondary-color); /* Pop of color on the shadow */
+    border-radius: 10px;
+    line-height: 1.6;
+    transform: rotate(1deg); /* Slight rotation for a handmade look */
+    transition: transform 0.5s ease;
 }
 
 .card:hover {
-    box-shadow: 6px 6px 0 var(--shadow-color);
-    transform: translate(-1px, -1px);
+    transform: rotate(-1deg) scale(1.01);
 }
 
-/* Buttons - Black background, Yellow text */
-.button {
-    display: inline-block;
-    background-color: var(--secondary-color);
+h1, h2, h3 {
+    font-family: 'Permanent Marker', cursive;
     color: var(--primary-color);
+    text-shadow: 1px 1px 0 var(--text-color);
+}
+
+.section-title {
+    font-size: 2.5em;
+    margin-bottom: 5px;
+}
+
+/* --- Specific Section Styling --- */
+
+.cta-button {
+    display: inline-block;
     padding: 10px 20px;
-    text-decoration: none;
-    border: var(--sketch-border);
-    border-radius: 15px 3px 15px 3px;
-    font-weight: 700;
-    transition: all 0.2s ease;
-    margin-top: 10px;
-}
-
-.button:hover {
+    margin: 10px;
     background-color: var(--primary-color);
-    color: var(--secondary-color);
-    box-shadow: 2px 2px 0 var(--shadow-color);
-    transform: translate(0, 0);
+    color: white;
+    text-decoration: none;
+    border: 3px solid var(--text-color);
+    border-radius: 5px 15px 5px 15px;
+    transition: background-color 0.3s;
+    font-family: 'Permanent Marker', cursive;
+    box-shadow: 3px 3px 0 var(--text-color);
 }
 
-/* List Items - Professional formatting */
-.card ul {
-    list-style: disc;
-    padding-left: 20px;
+.secondary-btn {
+    background-color: var(--secondary-color);
 }
 
-.card li {
-    margin-bottom: 10px;
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    width: 100%;
 }
 
-/* Professional Contact Section */
-.contact-info {
-    font-weight: 700;
+.experience-card, .award-card {
+    transform: rotate(-1deg);
+}
+
+.experience-card:nth-child(even) {
+    transform: rotate(2deg);
+}
+
+.contact-card .cta-button {
+    font-size: 1.2em;
+    background-color: #27ae60; /* Green for contact */
+}
+
+.social-links a {
+    margin: 0 10px;
+    font-family: 'Permanent Marker', cursive;
+    color: var(--text-color);
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
 }
