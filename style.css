@@ -1,155 +1,185 @@
-/*
-  Doodle Background Setup:
-  You must upload a tileable doodle image (e.g., a simple line art pattern)
-  to your repository. Name it 'doodle-bg.png' and place it in an 'images' folder,
-  or replace the URL below with your preferred image link.
-*/
-:root {
-    --primary-color: #ff6b6b; /* Playful Red */
-    --secondary-color: #48dbfb; /* Playful Blue */
-    --background-color: #f7f1e3; /* Paper-like Off-White */
-    --text-color: #2c3e50;
-    --sketch-border: 4px solid var(--text-color);
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Architects Daughter', cursive; /* Playful, handwritten font */
-    color: var(--text-color);
-    background-color: var(--background-color);
-    /* Placeholder: Replace with your doodle image URL or 'url(images/doodle-bg.png)' */
-    background-image: url('https://www.transparenttextures.com/patterns/notebook.png'); 
-    background-attachment: fixed;
-}
-
-/* --- Navigation & Tabs Styling --- */
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(5px);
-    border-bottom: var(--sketch-border);
-}
-
-.nav-doodle {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-around;
-    gap: 15px;
-}
-
-nav a {
-    font-family: 'Permanent Marker', cursive; /* A bolder, marker-style font for tabs */
-    color: var(--text-color);
-    text-decoration: none;
-    padding: 8px 15px;
-    border: 2px solid var(--text-color);
-    border-radius: 20px 5px 20px 5px; /* Sketchy/wavy border effect */
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    font-size: 1.1em;
-    box-shadow: 2px 2px 0 var(--text-color); /* Lifted/sketched button shadow */
-}
-
-nav a:hover {
-    background-color: var(--primary-color);
-    color: white;
-    transform: translate(-1px, -1px); /* Little playful 'jump' animation */
-    box-shadow: 4px 4px 0 var(--text-color);
-}
-
-/* --- Section & Card Styling --- */
-.container {
-    min-height: 100vh;
-    padding: 80px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.card {
-    background-color: white;
-    padding: 40px;
-    margin: 20px;
-    max-width: 700px;
-    border: var(--sketch-border);
-    box-shadow: 8px 8px 0 var(--secondary-color); /* Pop of color on the shadow */
-    border-radius: 10px;
-    line-height: 1.6;
-    transform: rotate(1deg); /* Slight rotation for a handmade look */
-    transition: transform 0.5s ease;
-}
-
-.card:hover {
-    transform: rotate(-1deg) scale(1.01);
-}
-
-h1, h2, h3 {
-    font-family: 'Permanent Marker', cursive;
-    color: var(--primary-color);
-    text-shadow: 1px 1px 0 var(--text-color);
-}
-
-.section-title {
-    font-size: 2.5em;
-    margin-bottom: 5px;
-}
-
-/* --- Specific Section Styling --- */
-
-.cta-button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 10px;
-    background-color: var(--primary-color);
-    color: white;
-    text-decoration: none;
-    border: 3px solid var(--text-color);
-    border-radius: 5px 15px 5px 15px;
-    transition: background-color 0.3s;
-    font-family: 'Permanent Marker', cursive;
-    box-shadow: 3px 3px 0 var(--text-color);
-}
-
-.secondary-btn {
-    background-color: var(--secondary-color);
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 1000px;
-    width: 100%;
-}
-
-.experience-card, .award-card {
-    transform: rotate(-1deg);
-}
-
-.experience-card:nth-child(even) {
-    transform: rotate(2deg);
-}
-
-.contact-card .cta-button {
-    font-size: 1.2em;
-    background-color: #27ae60; /* Green for contact */
-}
-
-.social-links a {
-    margin: 0 10px;
-    font-family: 'Permanent Marker', cursive;
-    color: var(--text-color);
-    text-decoration: underline;
-    transition: color 0.3s;
-}
-
-.social-links a:hover {
-    color: var(--primary-color);
-}
+diff --git a/script.js b/script.js
+new file mode 100644
+index 0000000000000000000000000000000000000000..c1f519c45df5a56ed1af0e9b63da6e6cf4082f31
+--- /dev/null
++++ b/script.js
+@@ -0,0 +1,179 @@
++const form = document.getElementById('analyze-form');
++const postText = document.getElementById('postText');
++const charCount = document.getElementById('char-count');
++const analyzeBtn = document.getElementById('analyze-btn');
++const spinner = document.getElementById('spinner');
++const btnText = document.getElementById('btn-text');
++const errorBanner = document.getElementById('error-banner');
++const emptyState = document.getElementById('empty-state');
++const results = document.getElementById('results');
++
++const overallScore = document.getElementById('overall-score');
++const toneSummary = document.getElementById('tone-summary');
++const emotionalImpact = document.getElementById('emotional-impact');
++const riskFlags = document.getElementById('risk-flags');
++const culturalNotes = document.getElementById('cultural-notes');
++const engagementLevel = document.getElementById('engagement-level');
++const engagementWhy = document.getElementById('engagement-why');
++const rewriteList = document.getElementById('rewrite-list');
++
++const API_BASE = 'http://localhost:4000';
++
++postText.addEventListener('input', () => {
++  charCount.textContent = `${postText.value.length} / 4000`;
++});
++
++function setLoading(isLoading) {
++  analyzeBtn.disabled = isLoading;
++  spinner.classList.toggle('hidden', !isLoading);
++  btnText.textContent = isLoading ? 'Analyzing...' : 'Analyze Post';
++}
++
++function clearError() {
++  errorBanner.classList.add('hidden');
++  errorBanner.textContent = '';
++}
++
++function showError(message) {
++  errorBanner.classList.remove('hidden');
++  errorBanner.textContent = message;
++}
++
++function riskBadgeClass(severity) {
++  if (severity === 'high') return 'bg-rose-100 text-rose-700';
++  if (severity === 'medium') return 'bg-amber-100 text-amber-700';
++  return 'bg-emerald-100 text-emerald-700';
++}
++
++function buildRewriteCard(title, text) {
++  const wrapper = document.createElement('div');
++  wrapper.className = 'rounded-lg border border-slate-200 p-3';
++
++  const heading = document.createElement('div');
++  heading.className = 'flex items-center justify-between gap-2';
++
++  const h4 = document.createElement('h4');
++  h4.className = 'font-medium text-sm';
++  h4.textContent = title;
++
++  const copyBtn = document.createElement('button');
++  copyBtn.className = 'text-xs font-semibold text-violet-700 hover:text-violet-900';
++  copyBtn.textContent = 'Use this rewrite';
++  copyBtn.type = 'button';
++  copyBtn.addEventListener('click', async () => {
++    try {
++      await navigator.clipboard.writeText(text || '');
++      copyBtn.textContent = 'Copied!';
++      setTimeout(() => (copyBtn.textContent = 'Use this rewrite'), 1200);
++    } catch {
++      copyBtn.textContent = 'Copy failed';
++      setTimeout(() => (copyBtn.textContent = 'Use this rewrite'), 1200);
++    }
++  });
++
++  const p = document.createElement('p');
++  p.className = 'mt-2 text-sm text-slate-700';
++  p.textContent = text || '—';
++
++  heading.appendChild(h4);
++  heading.appendChild(copyBtn);
++  wrapper.appendChild(heading);
++  wrapper.appendChild(p);
++
++  return wrapper;
++}
++
++function renderAnalysis(data) {
++  emptyState.classList.add('hidden');
++  results.classList.remove('hidden');
++
++  overallScore.textContent = `${data.overallScore ?? '--'}/100`;
++  toneSummary.textContent = data.toneSummary || 'No tone summary available.';
++
++  emotionalImpact.innerHTML = '';
++  (data.emotionalImpact || []).forEach(item => {
++    const li = document.createElement('li');
++    li.textContent = item;
++    emotionalImpact.appendChild(li);
++  });
++
++  riskFlags.innerHTML = '';
++  (data.misinterpretationRisks || []).forEach(risk => {
++    const row = document.createElement('div');
++    row.className = 'rounded-lg border border-slate-200 p-3';
++
++    const badge = document.createElement('span');
++    badge.className = `inline-flex rounded-full px-2 py-0.5 text-xs font-semibold ${riskBadgeClass(risk.severity)}`;
++    badge.textContent = (risk.severity || 'low').toUpperCase();
++
++    const riskText = document.createElement('p');
++    riskText.className = 'mt-2 text-sm font-medium';
++    riskText.textContent = risk.risk || 'Potential misinterpretation risk.';
++
++    const rationale = document.createElement('p');
++    rationale.className = 'mt-1 text-sm text-slate-600';
++    rationale.textContent = risk.rationale || '';
++
++    row.appendChild(badge);
++    row.appendChild(riskText);
++    row.appendChild(rationale);
++    riskFlags.appendChild(row);
++  });
++
++  culturalNotes.innerHTML = '';
++  (data.culturalSensitivityNotes || []).forEach(note => {
++    const li = document.createElement('li');
++    li.textContent = note;
++    culturalNotes.appendChild(li);
++  });
++
++  const level = data.engagementPrediction?.level || 'unknown';
++  engagementLevel.textContent = `Level: ${String(level).toUpperCase()}`;
++  engagementLevel.className = 'text-sm font-medium ' + (
++    level === 'high' ? 'text-emerald-700' : level === 'medium' ? 'text-amber-700' : 'text-slate-700'
++  );
++  engagementWhy.textContent = data.engagementPrediction?.why || '';
++
++  rewriteList.innerHTML = '';
++  rewriteList.appendChild(buildRewriteCard('Safer rewrite', data.safeRewrite));
++  rewriteList.appendChild(buildRewriteCard('More engaging rewrite', data.engagingRewrite));
++  rewriteList.appendChild(buildRewriteCard('Professional rewrite', data.professionalRewrite));
++}
++
++form.addEventListener('submit', async (event) => {
++  event.preventDefault();
++  clearError();
++
++  const payload = {
++    platform: document.getElementById('platform').value,
++    goal: document.getElementById('goal').value,
++    audience: document.getElementById('audience').value.trim(),
++    postText: postText.value.trim(),
++  };
++
++  if (!payload.postText) {
++    showError('Please enter your draft post before analyzing.');
++    return;
++  }
++
++  setLoading(true);
++  try {
++    const response = await fetch(`${API_BASE}/api/analyze`, {
++      method: 'POST',
++      headers: { 'Content-Type': 'application/json' },
++      body: JSON.stringify(payload),
++    });
++
++    const result = await response.json().catch(() => ({}));
++
++    if (!response.ok) {
++      throw new Error(result.error || `Request failed (${response.status})`);
++    }
++
++    renderAnalysis(result);
++  } catch (error) {
++    showError(error.message || 'Something went wrong while analyzing your post.');
++  } finally {
++    setLoading(false);
++  }
++});
