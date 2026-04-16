@@ -1,108 +1,587 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Niharika Srivastava - Creative Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Permanent+Marker&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <nav>
-        <div class="nav-doodle">
-            <a href="#home">Home</a>
-            <a href="#experience">Marketing Work</a>
-            <a href="#literary">Literary Corner</a>
-            <a href="#awards">Awards</a>
-            <a href="#contact">Say Hello</a>
-        </div>
-    </nav>
-
-    <section id="home" class="container">
-        <div class="card home-card">
-            <h1>Hi, I'm Niharika Srivastava!</h1>
-            <h2>Writer | Professional Content Marketer | Published Author</h2>
-            [cite_start]<p>I bring **8 years** of diverse experience, combining 5 years of corporate content strategy with 3 years as a passionate writer[cite: 2]. I craft compelling narratives for big brands in India and in my own novels.</p>
-            <div class="key-links">
-                <a href="#experience" class="cta-button">See My Marketing Impact</a>
-                <a href="[Your Novel's Amazon Link]" target="_blank" class="cta-button secondary-btn">Read My Novel, "To be Continued..."</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="experience" class="container">
-        <h1 class="section-title">Corporate Content & Marketing Experience</h1>
-        <p class="subtitle">8 years of strategic content creation and driving measurable results.</p>
-        <div class="grid-container">
-            <div class="card experience-card">
-                [cite_start]<h3>Bajaj Finance Limited [cite: 2]</h3>
-                <p>Social Media Manager (Aug 2023 - Present)</p>
-                <ul>
-                    [cite_start]<li>Drove **Instagram follower growth from 2K to 12K in six months**[cite: 2].</li>
-                    [cite_start]<li>Managed social media for 1M+ LinkedIn and 10K+ Instagram followers using advanced **AI tools**[cite: 2].</li>
-                </ul>
-            </div>
-            <div class="card experience-card">
-                [cite_start]<h3>E2E Networks & Scaler Academy [cite: 2]</h3>
-                <p>Technical Content Manager & Marketing Specialist</p>
-                <ul>
-                    [cite_start]<li>Developed targeted content strategies for audience engagement and growth[cite: 2].</li>
-                    [cite_start]<li>Counseled **500+ IT professionals** into Scaler Academy, leveraging **CRM (Zoho)**[cite: 2].</li>
-                </ul>
-            </div>
-            <div class="card experience-card">
-                [cite_start]<h3>PlanetSpark [cite: 2]</h3>
-                <p>Marketing Specialist</p>
-                <ul>
-                    [cite_start]<li>Crafted K-12 curriculums, driving over **1,000 admissions** and exceeding revenue targets by **200-300%**[cite: 2].</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="literary" class="container">
-        <h1 class="section-title">My Literary Corner (The Poet in Me)</h1>
-        <div class="card literary-card">
-            <p>I have been a published **poet for almost 30 times** and have dedicated myself to the literary community.</p>
-            <ul>
-                [cite_start]<li>**Novel:** Published the novel **"To be Continued..."** by Blue Rose Publishers[cite: 2].</li>
-                [cite_start]<li>**Literary Leadership:** Designated as a **Literary Captain** in the 'Army of Literary Warriors' at StoryMirror[cite: 1].</li>
-                [cite_start]<li>**Publications:** Contributed illustrations and art in the contents of the *Verse of Silence*[cite: 1].</li>
-            </ul>
-        </div>
-    </section>
-    
-    <section id="awards" class="container">
-        <h1 class="section-title">Awards & Recognition</h1>
-        <div class="grid-container awards-grid">
-            <div class="card award-card">
-                <h3>100 Inspiring Authors of India Award</h3>
-                [cite_start]<p>Received this recognition from The Indian Awaz in **2018** for my valuable contribution to the writing community[cite: 1].</p>
-            </div>
-            <div class="card award-card">
-                <h3>#SheForeword Recognition</h3>
-                [cite_start]<p>Recognized on International Women's Day (2020 Edition) for inspiring literary endeavors[cite: 1].</p>
-            </div>
-            <div class="card award-card">
-                <h3>Wingword Poetry Prize</h3>
-                [cite_start]<p>Certificate of Merit for participation in India's largest annual poetry competition in **2018**[cite: 1].</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="container">
-        <h1 class="section-title">Let's Connect & Create!</h1>
-        <div class="card contact-card">
-            <p>Email me to discuss content strategy, writing collaborations, or publishing projects.</p>
-            [cite_start]<a href="mailto:niharikasrivastava1998@gmail.com" class="cta-button contact-btn">niharikasrivastava1998@gmail.com [cite: 2]</a>
-            <div class="social-links">
-                <a href="[Your LinkedIn Profile]" target="_blank">LinkedIn</a> |
-                <a href="[Your GitHub Profile]" target="_blank">GitHub</a>
-            </div>
-        </div>
-    </section>
-
-    <script src="script.js"></script>
-</body>
-</html>
+diff --git a/index.html b/index.html
+index acbd01c3f78986de355c20d6b6cddebc934f738b..fdc55347b90871066d62f951e37d0ab884e0ef6f 100644
+--- a/index.html
++++ b/index.html
+@@ -1,295 +1,306 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+-    <meta charset="UTF-8">
+-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-    <title>AI Math Solver</title>
+-    <!-- Load Tailwind CSS -->
+-    <script src="https://cdn.tailwindcss.com"></script>
+-    <style>
+-        /* Custom styles for appearance */
+-        body {
+-            font-family: 'Inter', sans-serif;
+-            background-color: #f7f9fc;
+-            min-height: 100vh;
+-        }
+-        .container-box {
+-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 0, 0, 0.05);
+-            background-color: white;
+-        }
+-        .btn-solve {
+-            transition: all 0.2s ease;
+-        }
+-        .btn-solve:hover:not(:disabled) {
+-            transform: translateY(-1px);
+-            box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
+-        }
+-        /* Style for LaTeX/Markdown output */
+-        #solution-output strong {
+-            font-weight: 700;
+-        }
+-        #solution-output code {
+-            background-color: #e2e8f0;
+-            padding: 2px 4px;
+-            border-radius: 4px;
+-            font-family: monospace;
+-        }
+-    </style>
++  <meta charset="UTF-8" />
++  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
++  <title>VibeScan — Pre-Publish Analyzer</title>
++  <script src="https://cdn.tailwindcss.com"></script>
++  <style>
++    body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
++    .glass { backdrop-filter: blur(8px); }
++  </style>
+ </head>
+-<body class="p-4 flex items-center justify-center">
+-
+-    <div id="app" class="w-full max-w-2xl mt-8 mb-8 container-box p-6 md:p-10 rounded-xl">
+-        <header class="text-center mb-8">
+-            <h1 class="text-3xl md:text-4xl font-extrabold text-blue-800">
+-                AI Math Solver
+-            </h1>
+-            <p class="text-gray-500 mt-2">Ask a calculation, formula, or complex math problem. Powered by Gemini with Google Search grounding.</p>
+-            
+-            <!-- API Status Indicator Added for Debugging -->
+-            <div id="api-status" class="mt-3 text-sm font-medium p-2 rounded inline-block"></div>
+-        </header>
+-
+-        <!-- Input Area -->
+-        <div class="mb-6">
+-            <label for="math-query" class="block text-sm font-medium text-gray-700 mb-2">Your Math Query:</label>
+-            <textarea id="math-query" rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 transition duration-150" placeholder="e.g., What is the integral of sin(x) from 0 to pi? Or, calculate 567 * 890."></textarea>
+-        </div>
++<body class="bg-slate-50 text-slate-900 min-h-screen">
++  <main class="max-w-7xl mx-auto px-4 py-8 md:py-12">
++    <header class="mb-8 md:mb-10">
++      <div class="inline-flex items-center gap-2 rounded-full border border-violet-200 bg-violet-50 px-3 py-1 text-xs font-semibold text-violet-700">
++        <span>✨</span>
++        <span>Second opinion before you post</span>
++      </div>
++      <h1 class="mt-4 text-3xl md:text-5xl font-extrabold tracking-tight">VibeScan</h1>
++      <p class="mt-3 text-slate-600 max-w-2xl">Analyze tone, emotional impact, potential misinterpretations, cultural sensitivity, and engagement — before you hit publish.</p>
++    </header>
+ 
+-        <!-- Solve Button -->
+-        <button id="solve-button" class="btn-solve w-full py-3 px-4 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 disabled:bg-blue-300 flex items-center justify-center">
+-            <span id="button-text">Solve Problem</span>
+-            <svg id="loading-spinner" class="animate-spin -ml-1 mr-3 h-5 w-5 text-white hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+-                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+-                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+-            </svg>
+-        </button>
+-        
+-        <!-- Error/Status Message Box -->
+-        <div id="status-message" class="mt-4 p-3 rounded-lg text-sm hidden"></div>
++    <section class="grid grid-cols-1 lg:grid-cols-2 gap-6">
++      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 md:p-6">
++        <h2 class="text-xl font-bold mb-4">Draft Input</h2>
++
++        <form id="analyze-form" class="space-y-4">
++          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
++            <div>
++              <label for="platform" class="block text-sm font-medium text-slate-700 mb-1">Platform</label>
++              <select id="platform" class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-violet-400">
++                <option>X</option>
++                <option>LinkedIn</option>
++                <option>Instagram</option>
++                <option>TikTok</option>
++                <option>Threads</option>
++                <option>Other</option>
++              </select>
++            </div>
++            <div>
++              <label for="goal" class="block text-sm font-medium text-slate-700 mb-1">Goal</label>
++              <select id="goal" class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-violet-400">
++                <option>inform</option>
++                <option>promote</option>
++                <option>joke</option>
++                <option>vent</option>
++                <option>celebrate</option>
++                <option>thought leadership</option>
++              </select>
++            </div>
++          </div>
+ 
++          <div>
++            <label for="audience" class="block text-sm font-medium text-slate-700 mb-1">Audience (optional)</label>
++            <input id="audience" type="text" placeholder="e.g., startup founders, fitness creators" class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-violet-400" />
++          </div>
+ 
+-        <!-- Output and Results Area -->
+-        <div id="results-container" class="mt-8 pt-6 border-t border-gray-200">
+-            <h2 class="text-xl font-bold text-gray-800 mb-4">Solution:</h2>
+-            <div id="solution-output" class="p-4 bg-gray-50 rounded-lg min-h-[100px] border border-gray-200 text-gray-700 whitespace-pre-wrap">
+-                Your calculated solution will appear here.
++          <div>
++            <div class="flex items-center justify-between mb-1">
++              <label for="postText" class="block text-sm font-medium text-slate-700">Draft post</label>
++              <span id="char-count" class="text-xs text-slate-500">0 / 4000</span>
+             </div>
+-            
+-            <!-- Sources Area -->
+-            <div id="sources-output" class="mt-4 p-3 bg-white border border-gray-200 rounded-lg text-sm hidden">
+-                <p class="font-semibold text-gray-600 mb-1">Sources Used:</p>
+-                <ul id="source-list" class="list-disc pl-5 text-gray-500 space-y-1">
+-                    <!-- Sources will be injected here -->
+-                </ul>
++            <textarea id="postText" rows="8" maxlength="4000" placeholder="Write your draft post here..." class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-violet-400"></textarea>
++          </div>
++
++          <button id="analyze-btn" type="submit" class="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-violet-600 px-4 py-3 font-semibold text-white hover:bg-violet-700 transition disabled:bg-violet-300 disabled:cursor-not-allowed">
++            <svg id="spinner" class="hidden h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
++              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" class="opacity-25"></circle>
++              <path d="M22 12a10 10 0 0 1-10 10" stroke="currentColor" stroke-width="4" class="opacity-75"></path>
++            </svg>
++            <span id="btn-text">Analyze Post</span>
++          </button>
++        </form>
++
++        <div id="error-banner" class="hidden mt-4 rounded-lg border border-rose-200 bg-rose-50 px-3 py-2 text-sm text-rose-700"></div>
++      </div>
++
++      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 md:p-6">
++        <h2 class="text-xl font-bold mb-4">Analysis</h2>
++        <div id="empty-state" class="rounded-xl border border-dashed border-slate-300 p-6 text-slate-500 text-sm">
++          Your analysis will appear here after you click <strong>Analyze Post</strong>.
++        </div>
++
++        <div id="results" class="hidden space-y-4">
++          <div class="rounded-xl border border-slate-200 p-4 bg-slate-50">
++            <div class="flex items-center justify-between">
++              <h3 class="font-semibold">Overall Score</h3>
++              <span id="overall-score" class="inline-flex items-center rounded-full bg-violet-100 text-violet-700 px-2.5 py-1 text-xs font-bold">--</span>
+             </div>
++            <p id="tone-summary" class="mt-2 text-sm text-slate-700"></p>
++          </div>
++
++          <div class="rounded-xl border border-slate-200 p-4">
++            <h3 class="font-semibold mb-2">Emotional Impact</h3>
++            <ul id="emotional-impact" class="list-disc pl-5 text-sm text-slate-700 space-y-1"></ul>
++          </div>
++
++          <div class="rounded-xl border border-slate-200 p-4">
++            <h3 class="font-semibold mb-2">Misinterpretation Risks</h3>
++            <div id="risk-flags" class="space-y-2"></div>
++          </div>
++
++          <div class="rounded-xl border border-slate-200 p-4">
++            <h3 class="font-semibold mb-2">Cultural Sensitivity</h3>
++            <ul id="cultural-notes" class="list-disc pl-5 text-sm text-slate-700 space-y-1"></ul>
++          </div>
++
++          <div class="rounded-xl border border-slate-200 p-4">
++            <h3 class="font-semibold mb-2">Engagement Prediction</h3>
++            <p id="engagement-level" class="text-sm font-medium"></p>
++            <p id="engagement-why" class="text-sm text-slate-700 mt-1"></p>
++          </div>
++
++          <div class="rounded-xl border border-slate-200 p-4">
++            <h3 class="font-semibold mb-3">Rewrite Options</h3>
++            <div class="space-y-3" id="rewrite-list"></div>
++          </div>
+         </div>
+-    </div>
+-
+-    <script>
+-        // The API endpoint and key are already defined here.
+-        const API_URL_BASE = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent';
+-        
+-        // 🚨🚨 CRITICAL SECURITY WARNING 🚨🚨
+-        // This is your API key, hardcoded for deployment to platforms like GitHub Pages.
+-        // If this repository is public, your key is visible to everyone.
+-        // Replace this key ONLY if you generate a new one, and remember to monitor its usage.
+-        const apiKey = "AIzaSyAlUc5YoRWo9z2KF3nr7YZ7AKoKgf-EU8w"; 
+-        
+-        // UI Elements
+-        const queryInput = document.getElementById('math-query');
+-        const solveButton = document.getElementById('solve-button');
+-        const buttonText = document.getElementById('button-text');
+-        const loadingSpinner = document.getElementById('loading-spinner');
+-        const solutionOutput = document.getElementById('solution-output');
+-        const sourcesOutput = document.getElementById('sources-output');
+-        const sourceList = document.getElementById('source-list');
+-        const statusMessage = document.getElementById('status-message');
+-        const apiStatus = document.getElementById('api-status'); // New element
+-
+-        /**
+-         * Utility function for API fetch with exponential backoff.
+-         */
+-        async function fetchWithBackoff(url, options, maxRetries = 5) {
+-            let delay = 1000;
+-            for (let i = 0; i < maxRetries; i++) {
+-                try {
+-                    const response = await fetch(url, options);
+-                    if (response.status === 429 || response.status >= 500) {
+-                        // Rate limit or server error, retry
+-                        throw new Error(`Server error or rate limit: ${response.status}`);
+-                    }
+-                    return response;
+-                } catch (error) {
+-                    if (i === maxRetries - 1) {
+-                        throw error;
+-                    }
+-                    console.warn(`Request failed (attempt ${i + 1}/${maxRetries}). Retrying in ${delay / 1000}s...`);
+-                    await new Promise(resolve => setTimeout(resolve, delay));
+-                    delay *= 2; // Double the delay
+-                }
+-            }
+-        }
++      </div>
++    </section>
++  </main>
++
++  <script>
++    const form = document.getElementById('analyze-form');
++    const postText = document.getElementById('postText');
++    const charCount = document.getElementById('char-count');
++    const analyzeBtn = document.getElementById('analyze-btn');
++    const spinner = document.getElementById('spinner');
++    const btnText = document.getElementById('btn-text');
++    const errorBanner = document.getElementById('error-banner');
++    const emptyState = document.getElementById('empty-state');
++    const results = document.getElementById('results');
++
++    const overallScore = document.getElementById('overall-score');
++    const toneSummary = document.getElementById('tone-summary');
++    const emotionalImpact = document.getElementById('emotional-impact');
++    const riskFlags = document.getElementById('risk-flags');
++    const culturalNotes = document.getElementById('cultural-notes');
++    const engagementLevel = document.getElementById('engagement-level');
++    const engagementWhy = document.getElementById('engagement-why');
++    const rewriteList = document.getElementById('rewrite-list');
++
++    const API_BASE = 'http://localhost:4000';
++
++    postText.addEventListener('input', () => {
++      charCount.textContent = `${postText.value.length} / 4000`;
++    });
+ 
+-        /**
+-         * Main function to call the Gemini API.
+-         */
+-        async function solveMathProblem(userQuery) {
+-            // This strict prompt forces the model to use the search tool for accurate calculations.
+-            const systemPrompt = "You are a world-class math and calculation engine. Your primary purpose is to solve the provided query accurately. You MUST use the Google Search tool for all factual checks and calculations, including complex arithmetic, algebra, calculus, and scientific constants. Always provide the final answer clearly, followed by a detailed, step-by-step explanation of the methodology. Present the response using standard Markdown and LaTeX syntax for equations ($$ for display math).";
+-            
+-            // Note: The apiKey variable is used here.
+-            const url = `${API_URL_BASE}?key=${apiKey}`;
+-            
+-            const payload = {
+-                contents: [{ parts: [{ text: userQuery }] }],
+-                systemInstruction: { parts: [{ text: systemPrompt }] },
+-                tools: [{ "google_search": {} }], // Google Search Grounding is enabled here (The "API infusion")
+-            };
+-
+-            const options = {
+-                method: 'POST',
+-                headers: { 'Content-Type': 'application/json' },
+-                body: JSON.stringify(payload)
+-            };
+-
+-            try {
+-                const response = await fetchWithBackoff(url, options);
+-                
+-                if (!response.ok) {
+-                    const errorBody = await response.json();
+-                    // Detect the 403 error specifically for better user feedback
+-                    if (response.status === 403) {
+-                       throw new Error(`403 Forbidden: API Key Missing/Invalid. Please ensure your key is valid and unrestricted.`);
+-                    }
+-                    throw new Error(`API returned status ${response.status}: ${errorBody.error?.message || 'Unknown error'}`);
+-                }
+-
+-                const result = await response.json();
+-                const candidate = result.candidates?.[0];
+-
+-                if (!candidate || !candidate.content?.parts?.[0]?.text) {
+-                    throw new Error("No generated content received from the API. Check the input or network connection.");
+-                }
+-
+-                const text = candidate.content.parts[0].text;
+-                
+-                // Extract grounding sources
+-                let sources = [];
+-                const groundingMetadata = candidate.groundingMetadata;
+-                if (groundingMetadata && groundingMetadata.groundingAttributions) {
+-                    sources = groundingMetadata.groundingAttributions
+-                        .map(attribution => ({
+-                            uri: attribution.web?.uri,
+-                            title: attribution.web?.title,
+-                        }))
+-                        .filter(source => source.uri && source.title);
+-                }
+-
+-                return { text, sources };
+-
+-            } catch (error) {
+-                console.error("API Call Failed:", error);
+-                return { text: `Error: Failed to fetch solution. ${error.message}`, sources: [] };
+-            }
++    function setLoading(isLoading) {
++      analyzeBtn.disabled = isLoading;
++      spinner.classList.toggle('hidden', !isLoading);
++      btnText.textContent = isLoading ? 'Analyzing...' : 'Analyze Post';
++    }
++
++    function clearError() {
++      errorBanner.classList.add('hidden');
++      errorBanner.textContent = '';
++    }
++
++    function showError(message) {
++      errorBanner.classList.remove('hidden');
++      errorBanner.textContent = message;
++    }
++
++    function riskBadgeClass(severity) {
++      if (severity === 'high') return 'bg-rose-100 text-rose-700';
++      if (severity === 'medium') return 'bg-amber-100 text-amber-700';
++      return 'bg-emerald-100 text-emerald-700';
++    }
++
++    function buildRewriteCard(title, text) {
++      const wrapper = document.createElement('div');
++      wrapper.className = 'rounded-lg border border-slate-200 p-3';
++
++      const heading = document.createElement('div');
++      heading.className = 'flex items-center justify-between gap-2';
++
++      const h4 = document.createElement('h4');
++      h4.className = 'font-medium text-sm';
++      h4.textContent = title;
++
++      const copyBtn = document.createElement('button');
++      copyBtn.className = 'text-xs font-semibold text-violet-700 hover:text-violet-900';
++      copyBtn.textContent = 'Use this rewrite';
++      copyBtn.type = 'button';
++      copyBtn.addEventListener('click', async () => {
++        try {
++          await navigator.clipboard.writeText(text || '');
++          copyBtn.textContent = 'Copied!';
++          setTimeout(() => (copyBtn.textContent = 'Use this rewrite'), 1200);
++        } catch {
++          copyBtn.textContent = 'Copy failed';
++          setTimeout(() => (copyBtn.textContent = 'Use this rewrite'), 1200);
+         }
++      });
++
++      const p = document.createElement('p');
++      p.className = 'mt-2 text-sm text-slate-700';
++      p.textContent = text || '—';
++
++      heading.appendChild(h4);
++      heading.appendChild(copyBtn);
++      wrapper.appendChild(heading);
++      wrapper.appendChild(p);
++
++      return wrapper;
++    }
++
++    function renderAnalysis(data) {
++      emptyState.classList.add('hidden');
++      results.classList.remove('hidden');
++
++      overallScore.textContent = `${data.overallScore ?? '--'}/100`;
++      toneSummary.textContent = data.toneSummary || 'No tone summary available.';
++
++      emotionalImpact.innerHTML = '';
++      (data.emotionalImpact || []).forEach(item => {
++        const li = document.createElement('li');
++        li.textContent = item;
++        emotionalImpact.appendChild(li);
++      });
++
++      riskFlags.innerHTML = '';
++      (data.misinterpretationRisks || []).forEach(risk => {
++        const row = document.createElement('div');
++        row.className = 'rounded-lg border border-slate-200 p-3';
+ 
+-        /**
+-         * UI rendering and control logic.
+-         */
+-        solveButton.addEventListener('click', async () => {
+-            if (solveButton.disabled) return; // Prevent double click if disabled by init
+-
+-            const query = queryInput.value.trim();
+-
+-            if (!query) {
+-                displayStatus('Please enter a math query.', 'bg-yellow-100 text-yellow-800');
+-                return;
+-            }
+-
+-            // Reset UI state
+-            solveButton.disabled = true;
+-            buttonText.textContent = 'Calculating...';
+-            loadingSpinner.classList.remove('hidden');
+-            solutionOutput.innerHTML = '<p class="text-gray-400">Thinking...</p>';
+-            sourcesOutput.classList.add('hidden');
+-            sourceList.innerHTML = '';
+-            statusMessage.classList.add('hidden');
+-            
+-            // Display status about the grounding
+-            displayStatus('Solving the problem using Gemini and searching the web for calculation accuracy...', 'bg-blue-100 text-blue-800');
+-
+-            const result = await solveMathProblem(query);
+-            
+-            // Re-enable button
+-            solveButton.disabled = false;
+-            buttonText.textContent = 'Solve Problem';
+-            loadingSpinner.classList.add('hidden');
+-
+-            // Check for and display hard errors
+-            if (result.text.startsWith('Error:')) {
+-                 solutionOutput.innerHTML = `<p class="text-red-600 font-semibold">${result.text}</p>`;
+-                 displayStatus('An API or network error occurred during calculation. See output above.', 'bg-red-100 text-red-800');
+-                 return;
+-            }
+-            
+-            // Update Solution Output
+-            // Simple markdown rendering for line breaks and basic emphasis
+-            solutionOutput.innerHTML = result.text
+-                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+-                .replace(/(\n)/g, '<br>');
+-
+-            // Update Sources
+-            if (result.sources && result.sources.length > 0) {
+-                result.sources.forEach((source, index) => {
+-                    const listItem = document.createElement('li');
+-                    listItem.innerHTML = `<a href="${source.uri}" target="_blank" class="text-blue-500 hover:text-blue-700 hover:underline">Source ${index + 1}: ${source.title}</a>`;
+-                    sourceList.appendChild(listItem);
+-                });
+-                sourcesOutput.classList.remove('hidden');
+-            } else {
+-                 sourcesOutput.classList.add('hidden');
+-            }
+-            
+-            // Display success message
+-            displayStatus('Solution generated successfully!', 'bg-green-100 text-green-800');
++        const badge = document.createElement('span');
++        badge.className = `inline-flex rounded-full px-2 py-0.5 text-xs font-semibold ${riskBadgeClass(risk.severity)}`;
++        badge.textContent = (risk.severity || 'low').toUpperCase();
++
++        const riskText = document.createElement('p');
++        riskText.className = 'mt-2 text-sm font-medium';
++        riskText.textContent = risk.risk || 'Potential misinterpretation risk.';
++
++        const rationale = document.createElement('p');
++        rationale.className = 'mt-1 text-sm text-slate-600';
++        rationale.textContent = risk.rationale || '';
++
++        row.appendChild(badge);
++        row.appendChild(riskText);
++        row.appendChild(rationale);
++        riskFlags.appendChild(row);
++      });
++
++      culturalNotes.innerHTML = '';
++      (data.culturalSensitivityNotes || []).forEach(note => {
++        const li = document.createElement('li');
++        li.textContent = note;
++        culturalNotes.appendChild(li);
++      });
++
++      const level = data.engagementPrediction?.level || 'unknown';
++      engagementLevel.textContent = `Level: ${String(level).toUpperCase()}`;
++      engagementLevel.className = 'text-sm font-medium ' + (
++        level === 'high' ? 'text-emerald-700' : level === 'medium' ? 'text-amber-700' : 'text-slate-700'
++      );
++      engagementWhy.textContent = data.engagementPrediction?.why || '';
++
++      rewriteList.innerHTML = '';
++      rewriteList.appendChild(buildRewriteCard('Safer rewrite', data.safeRewrite));
++      rewriteList.appendChild(buildRewriteCard('More engaging rewrite', data.engagingRewrite));
++      rewriteList.appendChild(buildRewriteCard('Professional rewrite', data.professionalRewrite));
++    }
++
++    form.addEventListener('submit', async (event) => {
++      event.preventDefault();
++      clearError();
++
++      const payload = {
++        platform: document.getElementById('platform').value,
++        goal: document.getElementById('goal').value,
++        audience: document.getElementById('audience').value.trim(),
++        postText: postText.value.trim(),
++      };
++
++      if (!payload.postText) {
++        showError('Please enter your draft post before analyzing.');
++        return;
++      }
++
++      setLoading(true);
++      try {
++        const response = await fetch(`${API_BASE}/api/analyze`, {
++          method: 'POST',
++          headers: { 'Content-Type': 'application/json' },
++          body: JSON.stringify(payload),
+         });
+-        
+-        /**
+-         * Displays a status/error message in the dedicated box.
+-         */
+-        function displayStatus(message, classes) {
+-            statusMessage.textContent = message;
+-            statusMessage.className = `mt-4 p-3 rounded-lg text-sm ${classes}`;
+-            statusMessage.classList.remove('hidden');
+-        }
+ 
+-        /**
+-         * Initializes the application on load and checks for API key status.
+-         */
+-        function initializeApp() {
+-            // Check the apiKey variable at runtime
+-            // Since it is hardcoded above, it should show 'Detected'
+-            if (!apiKey) {
+-                // This path should ideally not be taken since the key is hardcoded.
+-                apiStatus.textContent = "API Key: MISSING";
+-                apiStatus.className = "mt-3 text-sm font-medium p-2 rounded inline-block bg-red-500 text-white";
+-                
+-                solutionOutput.innerHTML = '<p class="text-red-600 font-semibold">CRITICAL ERROR: API Key Missing (Hardcoded check failed).</p>';
+-                displayStatus('403 Forbidden Error Likely: The application is running, but the Gemini API Key is missing. Please ensure your key is correct.', 'bg-red-100 text-red-800');
+-                
+-                solveButton.disabled = true;
+-            } else {
+-                // API Key is present (hardcoded), ready to use
+-                apiStatus.textContent = "API Key: Detected";
+-                apiStatus.className = "mt-3 text-sm font-medium p-2 rounded inline-block bg-green-500 text-white";
+-                
+-                solutionOutput.innerHTML = '<p class="text-gray-500">Enter your calculation above and click "Solve Problem" to get started! (API Key detected.)</p>';
+-                solveButton.disabled = false;
+-            }
+-        }
++        const result = await response.json().catch(() => ({}));
+ 
+-        window.onload = initializeApp;
+-    </script>
++        if (!response.ok) {
++          throw new Error(result.error || `Request failed (${response.status})`);
++        }
+ 
++        renderAnalysis(result);
++      } catch (error) {
++        showError(error.message || 'Something went wrong while analyzing your post.');
++      } finally {
++        setLoading(false);
++      }
++    });
++  </script>
+ </body>
+ </html>
